@@ -50,7 +50,7 @@
 #include "compute_pair_gran_local.h"
 #include "vector_liggghts.h"
 #include "math_extra_liggghts.h"
-
+#include <complex>
 #include <vector>
 #include <map>
 #include <utility>
@@ -285,19 +285,12 @@ void PairGranHertzHistory::compute_force_eval(int eflag, int vflag,int addflag)
   if (inum_last != inum) {	
 	fluid_bonds.resize(inum);
   	for (ii = inum_last; ii < inum; ii++) {
-		thickness.push_back(radius[ii]*volume_percent);
+		thickness.push_back(radius[ii]*volume_percent);		
 	}
   }
   std::vector<int> thick_flag_data(thickness.size()*thickness.size(),1);
   const std::size_t dims[2] = {thickness.size(), thickness.size()};
   Slice<int, 2> thick_flag(thick_flag_data, dims);
-  //int thick_flag[thickness.size()][thickness.size()];
-  // int it,jt;
-  /*
-  for(it=0; it<thickness.size();it++)
-	for(jt=0; jt<thickness.size();jt++)
-		thick_flag[it][jt]=1;
-  */
   // loop over neighbors of my atoms
   double timestep= update->ntimestep * update->dt;
   //std::ofstream myfile;
@@ -371,6 +364,7 @@ void PairGranHertzHistory::compute_force_eval(int eflag, int vflag,int addflag)
 	if (fluid_bonds[i].count(j) != 0) {	
 		cbflag=true;
 		vol_bond_ij0 = fluid_bonds[i][j].first;//*pow(reff,2)*4*PI/3;
+		
 		thick_eff0=vol_bond_ij0/(pow(reff,2)*4*PI/12);
 		time_bond_ij=timestep-fluid_bonds[i][j].second;
 		fcbConst=4*PI*reff*gammacb*cos(thetacb);
@@ -378,15 +372,21 @@ void PairGranHertzHistory::compute_force_eval(int eflag, int vflag,int addflag)
 			{fcb=-fcbConst*(1.0-1.0/sqrt(1+vol_bond_ij/PI/deltan/deltan));}
 		else
 			{fcb=-fcbConst;}
-		vol_bond_ij=vol_bond_ij0*(1- exp(-c0*time_bond_ij*pow(thick_eff0,3)/vol_bond_ij0/viscb));
+		std::complex<double> h;
+		h.real(0);
+		h.imag(1e-12);
+		std::complex<double> vol_bond_ij_com;
+		vol_bond_ij_com=vol_bond_ij0*(1.0-exp(-c0*(time_bond_ij+h)*pow(thick_eff0,3)/vol_bond_ij0/viscb));
+		vol_bond_ij=vol_bond_ij_com.real();
+		double del_vol_bond_ij=vol_bond_ij_com.imag()/h.imag();
 		//if(to_file_flag)  bridge_res<<iii<<","<<jjj<<","<<xtmp <<","<<ztmp<<","<< x[j][0]<<","<< x[j][2]<<","<<vol_bond_ij<<std::endl;
 		if(thick_flag[iii][jjj]==1){
-			thicki=thicki-vol_bond_ij*radj/(12*(radj+radi)*4*PI*pow(reff,2));
-			thickj=thickj-vol_bond_ij*radi/(12*(radj+radi)*4*PI*pow(reff,2));
+			thicki=thicki-del_vol_bond_ij*radj/(12*(radj+radi)*4*PI*pow(reff,2))*update->dt;
+			thickj=thickj-del_vol_bond_ij*radi/(12*(radj+radi)*4*PI*pow(reff,2))*update->dt;
 		//	if (thicki<0) std::cerr<<iii<<"   "<<thickness[iii]<<"   "<<thicki<<"   "<<vol_bond_ij*radj/(12*(radj+radi)*4*PI*pow(reff,2))<<std::endl;
 			if(to_file_flag)  	bridge_res<<iii<<","<<jjj<<","<<vol_bond_ij<<","<<thicki <<","<<thickj<<",";
-			thickness[jjj]=1;
-			thickness[iii]=1;
+			thickness[jjj]=thickj;
+			thickness[iii]=thicki;
 			thickeff=(thicki+thickj)/2;
 			thick_flag[iii][jjj]=0;
 			thick_flag[jjj][iii]=0;
@@ -486,9 +486,8 @@ void PairGranHertzHistory::compute_force_eval(int eflag, int vflag,int addflag)
 			r = sqrt(rsq);
 			rinv = 1.0/r;
 			rsqinv = 1.0/rsq;
-			//std::cout<<radcut;	
-			// relative translational velocity
 		       	if (fluid_bonds[i].count(j) != 1) {
+		//		std::cerr<<thicki<<"  "<<thickj<<"  "<<thickeff<<"   "<<thickeff*pow(reff,2)*4*PI/12<<std::endl;
 				fluid_bonds[i][j] = std::make_pair(thickeff*pow(reff,2)*4*PI/12, timestep);//update->ntimestep * update->dt);
 			}	
        

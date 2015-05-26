@@ -173,7 +173,9 @@ pair_gran_hertz_history.o: pair_gran_hertz_history.cpp \
  surface_mesh_I.h tri_mesh_I.h fix_contact_history_I.h neigh_list.h \
  neigh_request.h fix_rigid.h fix_property_global.h input.h \
  mech_param_gran.h compute_pair_gran_local.h compute.h \
- /usr/include/c++/4.8/vector /usr/include/c++/4.8/bits/stl_construct.h \
+ /usr/include/c++/4.8/complex /usr/include/c++/4.8/sstream \
+ /usr/include/c++/4.8/bits/sstream.tcc /usr/include/c++/4.8/vector \
+ /usr/include/c++/4.8/bits/stl_construct.h \
  /usr/include/c++/4.8/ext/alloc_traits.h \
  /usr/include/c++/4.8/bits/stl_uninitialized.h \
  /usr/include/c++/4.8/bits/stl_vector.h \

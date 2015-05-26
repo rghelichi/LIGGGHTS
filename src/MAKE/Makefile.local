@@ -7,7 +7,7 @@ SHELL = /bin/bash -l
 # specify flags and libraries needed for your compiler
 
 CC =		mpic++
-CCFLAGS =	-g -O0 -std=c++11 -Wall
+CCFLAGS =	-g -O0 -std=c++11 #-Wall
 SHFLAGS =	-fPIC
 DEPFLAGS =	-M
 
