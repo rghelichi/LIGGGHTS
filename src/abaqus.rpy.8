@@ -1,0 +1,197 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 6.14-2 replay file
+# Internal Version: 2014_08_22-09.53.04 134497
+# Run by ramin on Tue Apr 28 10:08:49 2015
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=291.041656494141, 
+    height=201.219039916992)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+Mdb()
+#: A new model database has been created.
+#: The model "Model-1" has been created.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.ModelFromInputFile(name='3D-Beam', 
+    inputFileName='/home/ramin/Dropbox/02Fretting/Beam Model/3D-Beam.inp')
+#: The model "3D-Beam" has been created.
+#: The part "PART-1" has been imported from the input file.
+#: The section "ConnProp-1_DIMPLE_X_1_2" has been assigned to 1 wire or attachment line.
+#: The section "ConnProp-2_DIMPLE_X_2_2" has been assigned to 1 wire or attachment line.
+#: The section "ConnProp-3_DIMPLE_Y_1_2" has been assigned to 1 wire or attachment line.
+#: The section "ConnProp-4_DIMPLE_Y_2_2" has been assigned to 1 wire or attachment line.
+#: The section "ConnProp-5_SPRING_X_2" has been assigned to 1 wire or attachment line.
+#: The section "ConnProp-6_SPRING_Y_2" has been assigned to 1 wire or attachment line.
+#: AbaqusException: The Time-Amplitude table should have at least two rows of data. This occurred while processing amplitude definition AMP-LOC1_X_SPAN1. Amplitude definition will be ignored. 
+#: The model "3D-Beam" has been imported from an input file. 
+#: Please scroll up to check for error and warning messages.
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+a = mdb.models['3D-Beam'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+#: 
+#: Point 1: 4.75E-03, 0., 5.715E-03  Point 2: 0., 0., 1.07442
+#:    Distance: 1.068716  Components: -4.75E-03, 0., 1.068705
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.89648, 
+    farPlane=2.78426, width=0.880964, height=0.595602, viewOffsetX=-0.0164545, 
+    viewOffsetY=0.024392)
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+o1 = session.openOdb(
+    name='/home/ramin/Abaqus-tmp/Fretting-MyMode/Dimple1U-Sub-Test.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#* OdbError: The database is from a previous release of Abaqus. 
+#* Run abaqus -upgrade -job <newFileName> -odb <oldOdbFileName> to upgrade it.
+from  abaqus import session
+session.upgradeOdb(
+    "/home/ramin/Abaqus-tmp/Fretting-MyMode/Dimple1U-Sub-Test.odb", 
+    "/tmp/Dimple1U-Sub-Test1430233135.17006.odb", )
+from  abaqus import session
+o7 = session.openOdb('/tmp/Dimple1U-Sub-Test1430233135.17006.odb')
+#: Model: /tmp/Dimple1U-Sub-Test1430233135.17006.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     0
+#: Number of Meshes:             0
+#: Number of Element Sets:       0
+#: Number of Node Sets:          0
+#: Number of Steps:              -1
+#: Warning: Odb file only contains user-defined data.
+session.viewports['Viewport: 1'].setValues(displayedObject=o7)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.71982, 
+    farPlane=4.28018, width=1.66586, height=1.39935, viewOffsetX=0.00336067, 
+    viewOffsetY=0.00991112)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.odbs['/tmp/Dimple1U-Sub-Test1430233135.17006.odb'].close()
+o1 = session.openOdb(
+    name='/home/ramin/Abaqus-tmp/Fretting-MyMode/FinalSubModel/DimpleSub-Test.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#* OdbError: The database is from a previous release of Abaqus. 
+#* Run abaqus -upgrade -job <newFileName> -odb <oldOdbFileName> to upgrade it.
+from  abaqus import session
+session.upgradeOdb(
+    "/home/ramin/Abaqus-tmp/Fretting-MyMode/FinalSubModel/DimpleSub-Test.odb", 
+    "/tmp/DimpleSub-Test1430233164.90703.odb", )
+from  abaqus import session
+o7 = session.openOdb('/tmp/DimpleSub-Test1430233164.90703.odb')
+#: Model: /tmp/DimpleSub-Test1430233164.90703.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     2
+#: Number of Meshes:             3
+#: Number of Element Sets:       1
+#: Number of Node Sets:          4
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o7)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=92.279, 
+    farPlane=127.998, width=6.66129, height=5.59559, viewOffsetX=-5.74002, 
+    viewOffsetY=-1.77504)
+leaf = dgo.LeafFromPartInstance(partInstanceName=('PART1-MOD-1', ))
+session.viewports['Viewport: 1'].odbDisplay.displayGroup.replace(leaf=leaf)
+leaf = dgo.LeafFromPartInstance(partInstanceName=('ELASTIC-TUBE-1', ))
+session.viewports['Viewport: 1'].odbDisplay.displayGroup.replace(leaf=leaf)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=91.0239, 
+    farPlane=127.463, width=15.6277, height=13.1275, viewOffsetX=-3.20273, 
+    viewOffsetY=-1.97948)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=88.5742, 
+    farPlane=127.611, width=8.29525, height=6.96814, viewOffsetX=-2.76688, 
+    viewOffsetY=-3.66817)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=17 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=16 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=15 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=14 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=13 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=11 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=88.3041, 
+    farPlane=129.393, width=9.92316, height=8.33561, viewOffsetX=-2.39874, 
+    viewOffsetY=-4.1364)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=88.3363, 
+    farPlane=129.36, width=9.92677, height=8.33865, viewOffsetX=-4.25519, 
+    viewOffsetY=-1.99628)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=89.1095, 
+    farPlane=128.587, width=5.14107, height=4.31858, viewOffsetX=-5.28595, 
+    viewOffsetY=-1.55112)
+session.viewports['Viewport: 1'].view.fitView()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=96.3135, 
+    farPlane=148.643, width=44.9945, height=37.7961, viewOffsetX=1.67819, 
+    viewOffsetY=0.496324)
+leaf = dgo.LeafFromOdbElementPick(elementPick=(('ELASTIC-TUBE-1', 32, (
+    '[#ffff0000 #ffff ]', )), ), )
+session.viewports['Viewport: 1'].odbDisplay.displayGroup.remove(leaf=leaf)
+leaf = dgo.LeafFromOdbElementPick(elementPick=(('ELASTIC-TUBE-1', 16, (
+    '[#ffff ]', )), ), )
+session.viewports['Viewport: 1'].odbDisplay.displayGroup.remove(leaf=leaf)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=109.533, 
+    farPlane=116.528, width=7.066, height=5.93555, viewOffsetX=-6.04159, 
+    viewOffsetY=-1.93736)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=109.556, 
+    farPlane=116.505, width=7.0675, height=5.93681, viewOffsetX=-6.86147, 
+    viewOffsetY=-2.69204)
+#: 
+#: Node: ELASTIC-TUBE-1.5646
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                  2.58232e+01,  1.19723e+00,  3.39558e+01,      -      
+#: Scale:                             3.27277e+00,  3.27277e+00,  3.27277e+00,      -      
+#: Deformed coordinates (unscaled):   2.60790e+01,  2.13605e+00,  3.39504e+01,      -      
+#: Deformed coordinates (scaled):     2.66603e+01,  4.26978e+00,  3.39379e+01,      -      
+#: Displacement (unscaled):           2.55754e-01,  9.38822e-01, -5.46104e-03,  9.73050e-01
+#: 
+#: Node: ELASTIC-TUBE-1.2550
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                  2.68731e+01,  1.19200e+00,  3.40384e+01,      -      
+#: Scale:                             3.27277e+00,  3.27277e+00,  3.27277e+00,      -      
+#: Deformed coordinates (unscaled):   2.71202e+01,  2.13814e+00,  3.40339e+01,      -      
+#: Deformed coordinates (scaled):     2.76817e+01,  4.28851e+00,  3.40236e+01,      -      
+#: Displacement (unscaled):           2.47045e-01,  9.46145e-01, -4.54611e-03,  9.77877e-01
+#: 
+#: Nodes for distance: ELASTIC-TUBE-1.5646, ELASTIC-TUBE-1.2550
+#:                                        1             2             3        Magnitude
+#: Base distance:                     1.04990e+00, -5.23365e-03,  8.26263e-02,  1.05316e+00
+#: Scale:                             3.27277e+00,  3.27277e+00,  3.27277e+00,      -      
+#: Deformed distance (unscaled):      1.04119e+00,  2.08950e-03,  8.35419e-02,  1.04454e+00
+#: Deformed distance (scaled):        1.02139e+00,  1.87340e-02,  8.56209e-02,  1.02515e+00
+#: Relative displacement (unscaled): -8.70897e-03,  7.32332e-03,  9.14937e-04,  1.14155e-02
+#: 
+#: Node: ELASTIC-TUBE-1.2596
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                  2.68731e+01,  1.19200e+00,  3.09710e+01,      -      
+#: Scale:                             3.27277e+00,  3.27277e+00,  3.27277e+00,      -      
+#: Deformed coordinates (unscaled):   2.71201e+01,  2.13125e+00,  3.09721e+01,      -      
+#: Deformed coordinates (scaled):     2.76812e+01,  4.26594e+00,  3.09746e+01,      -      
+#: Displacement (unscaled):           2.46911e-01,  9.39248e-01,  1.10820e-03,  9.71161e-01
+#: 
+#: Node: ELASTIC-TUBE-1.2733
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                  2.67833e+01,  1.20178e+00,  3.39979e+01,      -      
+#: Scale:                             3.27277e+00,  3.27277e+00,  3.27277e+00,      -      
+#: Deformed coordinates (unscaled):   2.70303e+01,  2.14287e+00,  3.39926e+01,      -      
+#: Deformed coordinates (scaled):     2.75917e+01,  4.28176e+00,  3.39807e+01,      -      
+#: Displacement (unscaled):           2.47023e-01,  9.41094e-01, -5.25199e-03,  9.72988e-01
+#: 
+#: Nodes for distance: ELASTIC-TUBE-1.2596, ELASTIC-TUBE-1.2733
+#:                                        1             2             3        Magnitude
+#: Base distance:                    -8.98552e-02,  9.78041e-03,  3.02686e+00,  3.02820e+00
+#: Scale:                             3.27277e+00,  3.27277e+00,  3.27277e+00,      -      
+#: Deformed distance (unscaled):     -8.97446e-02,  1.16260e-02,  3.02049e+00,  3.02185e+00
+#: Deformed distance (scaled):       -8.94890e-02,  1.58205e-02,  3.00604e+00,  3.00741e+00
+#: Relative displacement (unscaled):  1.11505e-04,  1.84560e-03, -6.36019e-03,  6.62349e-03

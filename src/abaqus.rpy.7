@@ -1,0 +1,36 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 6.14-2 replay file
+# Internal Version: 2014_08_22-09.53.04 134497
+# Run by ramin on Tue Apr 28 09:55:58 2015
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=291.041656494141, 
+    height=201.219039916992)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+execfile('/home/ramin/Dropbox/02Fretting/Beam Model/InputGenerator-ver2.py', 
+    __main__.__dict__)
+#* TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+#* File "/home/ramin/Dropbox/02Fretting/Beam Model/InputGenerator-ver2.py", 
+#* line 92, in <module>
+#*     NAME=NAME+'-Sp'+span+'-Gp'+Gap+'-f'+MaxFreq
+execfile('/home/ramin/Dropbox/02Fretting/Beam Model/InputGenerator.py', 
+    __main__.__dict__)
+#: A new model database has been created.
+#: The model "Model-1" has been created.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+#* TypeError: 'NoneType' object has no attribute '__getitem__'
+#* File "/home/ramin/Dropbox/02Fretting/Beam Model/InputGenerator.py", line 
+#* 116, in <module>
+#*     Gap=float(Gap[0])*10**-6

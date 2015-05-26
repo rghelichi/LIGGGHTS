@@ -1,0 +1,1861 @@
+*HEADING
+GTRF full-rod dynamics model
+*NODE, NSET=N1
+1,  0.000000,  0.000000,  0.000000
+*NODE, NSET=N2
+2,  0.000000,  0.000000,  0.005715
+*NODE, NSET=N4
+4,  0.000000,  0.000000,  0.019050
+*NODE, NSET=N6
+6,  0.000000,  0.000000,  0.024765
+*NODE, NSET=N7
+7,  0.000000,  0.000000,  0.030480
+*NODE, NSET=N22
+22,  0.000000,  0.000000,  0.276225
+*NODE, NSET=N37
+37,  0.000000,  0.000000,  0.521970
+*NODE, NSET=N38
+38,  0.000000,  0.000000,  0.527685
+*NODE, NSET=N40
+40,  0.000000,  0.000000,  0.541020
+*NODE, NSET=N42
+42,  0.000000,  0.000000,  0.546735
+*NODE, NSET=N43
+43,  0.000000,  0.000000,  0.552450
+*NODE, NSET=N58
+58,  0.000000,  0.000000,  0.798195
+*NODE, NSET=N73
+73,  0.000000,  0.000000,  1.043940
+*NODE, NSET=N74
+74,  0.000000,  0.000000,  1.049655
+*NODE, NSET=N76
+76,  0.000000,  0.000000,  1.062990
+*NODE, NSET=N78
+78,  0.000000,  0.000000,  1.068705
+*NODE, NSET=N79
+79,  0.000000,  0.000000,  1.074420
+*NODE, NSET=N94
+94,  0.000000,  0.000000,  1.320165
+*NODE, NSET=N109
+109,  0.000000,  0.000000,  1.565910
+*NODE, NSET=N110
+110,  0.000000,  0.000000,  1.571625
+*NODE, NSET=N112
+112,  0.000000,  0.000000,  1.584960
+*NODE, NSET=N114
+114,  0.000000,  0.000000,  1.590675
+*NODE, NSET=N115
+115,  0.000000,  0.000000,  1.596390
+*NODE, NSET=N130
+130,  0.000000,  0.000000,  1.842135
+*NODE, NSET=N145
+145,  0.000000,  0.000000,  2.087880
+*NODE, NSET=N146
+146,  0.000000,  0.000000,  2.093595
+*NODE, NSET=N148
+148,  0.000000,  0.000000,  2.106930
+*NODE, NSET=N150
+150,  0.000000,  0.000000,  2.112645
+*NODE, NSET=N151
+151,  0.000000,  0.000000,  2.118360
+*NODE, NSET=N166
+166,  0.000000,  0.000000,  2.364105
+*NODE, NSET=N181
+181,  0.000000,  0.000000,  2.609850
+*NODE, NSET=N182
+182,  0.000000,  0.000000,  2.615565
+*NODE, NSET=N184
+184,  0.000000,  0.000000,  2.628900
+*NODE, NSET=N186
+186,  0.000000,  0.000000,  2.634615
+*NODE, NSET=N187
+187,  0.000000,  0.000000,  2.640330
+*NODE, NSET=N202
+202,  0.000000,  0.000000,  2.886075
+*NODE, NSET=N217
+217,  0.000000,  0.000000,  3.131820
+*NODE, NSET=N218
+218,  0.000000,  0.000000,  3.137535
+*NODE, NSET=N220
+220,  0.000000,  0.000000,  3.150870
+*NODE, NSET=N222
+222,  0.000000,  0.000000,  3.156585
+*NODE, NSET=N223
+223,  0.000000,  0.000000,  3.162300
+*NODE, NSET=N238
+238,  0.000000,  0.000000,  3.408045
+*NODE, NSET=N253
+253,  0.000000,  0.000000,  3.653790
+*NODE, NSET=N254
+254,  0.000000,  0.000000,  3.659505
+*NODE, NSET=N256
+256,  0.000000,  0.000000,  3.672840
+*NODE, NSET=N258
+258,  0.000000,  0.000000,  3.678555
+*NODE, NSET=N259
+259,  0.000000,  0.000000,  3.684270
+*NFILL, NSET=span_p2_beam12, BIAS=1.000000
+N1, N2, 1, 1
+N37, N38, 1, 1
+N73, N74, 1, 1
+N109, N110, 1, 1
+N145, N146, 1, 1
+N181, N182, 1, 1
+N217, N218, 1, 1
+N253, N254, 1, 1
+*NFILL, NSET=span_p2_beam23, BIAS=1.000000
+N2, N4, 2, 1
+N38, N40, 2, 1
+N74, N76, 2, 1
+N110, N112, 2, 1
+N146, N148, 2, 1
+N182, N184, 2, 1
+N218, N220, 2, 1
+N254, N256, 2, 1
+*NFILL, NSET=span_p2_beam34, BIAS=1.000000
+N4, N6, 2, 1
+N40, N42, 2, 1
+N76, N78, 2, 1
+N112, N114, 2, 1
+N148, N150, 2, 1
+N184, N186, 2, 1
+N220, N222, 2, 1
+N256, N258, 2, 1
+*NFILL, NSET=span_p2_beam45, BIAS=1.000000
+N6, N7, 1, 1
+N42, N43, 1, 1
+N78, N79, 1, 1
+N114, N115, 1, 1
+N150, N151, 1, 1
+N186, N187, 1, 1
+N222, N223, 1, 1
+N258, N259, 1, 1
+*NFILL, NSET=span_p1_beam56, BIAS=0.869565
+N7, N22, 15, 1
+N43, N58, 15, 1
+N79, N94, 15, 1
+N115, N130, 15, 1
+N151, N166, 15, 1
+N187, N202, 15, 1
+N223, N238, 15, 1
+*NFILL, NSET=span_p1_beam67, BIAS=1.150000
+N22, N37, 15, 1
+N58, N73, 15, 1
+N94, N109, 15, 1
+N130, N145, 15, 1
+N166, N181, 15, 1
+N202, N217, 15, 1
+N238, N253, 15, 1
+*NSET, NSET=span_beam
+span_p2_beam12
+span_p2_beam23
+span_p2_beam34
+span_p2_beam45
+span_p1_beam56
+span_p1_beam67
+*ELEMENT, TYPE=B31, ELSET=Elbody
+1, 1, 2
+*ELGEN, ELSET=Elbody
+1, 1, 1, 1, 1, 1, 1, 258, 1, 1
+*NODE, NSET=N261
+261,  0.004750,  0.000000,  0.005715
+*NODE, NSET=N262
+262,  0.004751,  0.000000,  0.005715
+*NODE, NSET=N263
+263,  0.012371,  0.000000,  0.005715
+*NODE, NSET=N264
+264,  0.004750,  0.000000,  0.024765
+*NODE, NSET=N265
+265,  0.004751,  0.000000,  0.024765
+*NODE, NSET=N266
+266,  0.012371,  0.000000,  0.024765
+*NODE, NSET=N267
+267,  0.000000,  0.004750,  0.005715
+*NODE, NSET=N268
+268,  0.000000,  0.004751,  0.005715
+*NODE, NSET=N269
+269,  0.000000,  0.012371,  0.005715
+*NODE, NSET=N270
+270,  0.000000,  0.004750,  0.024765
+*NODE, NSET=N271
+271,  0.000000,  0.004751,  0.024765
+*NODE, NSET=N272
+272,  0.000000,  0.012371,  0.024765
+*NODE, NSET=N273
+273,  -0.004750,  0.000000,  0.019050
+*NODE, NSET=N274
+274,  -0.004751,  0.000000,  0.019050
+*NODE, NSET=N275
+275,  -0.012371,  0.000000,  0.019050
+*NODE, NSET=N276
+276,  0.000000,  -0.004750,  0.019050
+*NODE, NSET=N277
+277,  0.000000,  -0.004751,  0.019050
+*NODE, NSET=N278
+278,  0.000000,  -0.012371,  0.019050
+*NODE, NSET=N279
+279,  0.004750,  0.000000,  0.527685
+*NODE, NSET=N280
+280,  0.004751,  0.000000,  0.527685
+*NODE, NSET=N281
+281,  0.012371,  0.000000,  0.527685
+*NODE, NSET=N282
+282,  0.004750,  0.000000,  0.546735
+*NODE, NSET=N283
+283,  0.004751,  0.000000,  0.546735
+*NODE, NSET=N284
+284,  0.012371,  0.000000,  0.546735
+*NODE, NSET=N285
+285,  0.000000,  0.004750,  0.527685
+*NODE, NSET=N286
+286,  0.000000,  0.004751,  0.527685
+*NODE, NSET=N287
+287,  0.000000,  0.012371,  0.527685
+*NODE, NSET=N288
+288,  0.000000,  0.004750,  0.546735
+*NODE, NSET=N289
+289,  0.000000,  0.004751,  0.546735
+*NODE, NSET=N290
+290,  0.000000,  0.012371,  0.546735
+*NODE, NSET=N291
+291,  -0.004750,  0.000000,  0.541020
+*NODE, NSET=N292
+292,  -0.004751,  0.000000,  0.541020
+*NODE, NSET=N293
+293,  -0.012371,  0.000000,  0.541020
+*NODE, NSET=N294
+294,  0.000000,  -0.004750,  0.541020
+*NODE, NSET=N295
+295,  0.000000,  -0.004751,  0.541020
+*NODE, NSET=N296
+296,  0.000000,  -0.012371,  0.541020
+*NODE, NSET=N297
+297,  0.004750,  0.000000,  1.049655
+*NODE, NSET=N298
+298,  0.004751,  0.000000,  1.049655
+*NODE, NSET=N299
+299,  0.012371,  0.000000,  1.049655
+*NODE, NSET=N300
+300,  0.004750,  0.000000,  1.068705
+*NODE, NSET=N301
+301,  0.004751,  0.000000,  1.068705
+*NODE, NSET=N302
+302,  0.012371,  0.000000,  1.068705
+*NODE, NSET=N303
+303,  0.000000,  0.004750,  1.049655
+*NODE, NSET=N304
+304,  0.000000,  0.004751,  1.049655
+*NODE, NSET=N305
+305,  0.000000,  0.012371,  1.049655
+*NODE, NSET=N306
+306,  0.000000,  0.004750,  1.068705
+*NODE, NSET=N307
+307,  0.000000,  0.004751,  1.068705
+*NODE, NSET=N308
+308,  0.000000,  0.012371,  1.068705
+*NODE, NSET=N309
+309,  -0.004750,  0.000000,  1.062990
+*NODE, NSET=N310
+310,  -0.004751,  0.000000,  1.062990
+*NODE, NSET=N311
+311,  -0.012371,  0.000000,  1.062990
+*NODE, NSET=N312
+312,  0.000000,  -0.004750,  1.062990
+*NODE, NSET=N313
+313,  0.000000,  -0.004751,  1.062990
+*NODE, NSET=N314
+314,  0.000000,  -0.012371,  1.062990
+*NODE, NSET=N315
+315,  0.004750,  0.000000,  1.571625
+*NODE, NSET=N316
+316,  0.004751,  0.000000,  1.571625
+*NODE, NSET=N317
+317,  0.012371,  0.000000,  1.571625
+*NODE, NSET=N318
+318,  0.004750,  0.000000,  1.590675
+*NODE, NSET=N319
+319,  0.004751,  0.000000,  1.590675
+*NODE, NSET=N320
+320,  0.012371,  0.000000,  1.590675
+*NODE, NSET=N321
+321,  0.000000,  0.004750,  1.571625
+*NODE, NSET=N322
+322,  0.000000,  0.004751,  1.571625
+*NODE, NSET=N323
+323,  0.000000,  0.012371,  1.571625
+*NODE, NSET=N324
+324,  0.000000,  0.004750,  1.590675
+*NODE, NSET=N325
+325,  0.000000,  0.004751,  1.590675
+*NODE, NSET=N326
+326,  0.000000,  0.012371,  1.590675
+*NODE, NSET=N327
+327,  -0.004750,  0.000000,  1.584960
+*NODE, NSET=N328
+328,  -0.004751,  0.000000,  1.584960
+*NODE, NSET=N329
+329,  -0.012371,  0.000000,  1.584960
+*NODE, NSET=N330
+330,  0.000000,  -0.004750,  1.584960
+*NODE, NSET=N331
+331,  0.000000,  -0.004751,  1.584960
+*NODE, NSET=N332
+332,  0.000000,  -0.012371,  1.584960
+*NODE, NSET=N333
+333,  0.004750,  0.000000,  2.093595
+*NODE, NSET=N334
+334,  0.004751,  0.000000,  2.093595
+*NODE, NSET=N335
+335,  0.012371,  0.000000,  2.093595
+*NODE, NSET=N336
+336,  0.004750,  0.000000,  2.112645
+*NODE, NSET=N337
+337,  0.004751,  0.000000,  2.112645
+*NODE, NSET=N338
+338,  0.012371,  0.000000,  2.112645
+*NODE, NSET=N339
+339,  0.000000,  0.004750,  2.093595
+*NODE, NSET=N340
+340,  0.000000,  0.004751,  2.093595
+*NODE, NSET=N341
+341,  0.000000,  0.012371,  2.093595
+*NODE, NSET=N342
+342,  0.000000,  0.004750,  2.112645
+*NODE, NSET=N343
+343,  0.000000,  0.004751,  2.112645
+*NODE, NSET=N344
+344,  0.000000,  0.012371,  2.112645
+*NODE, NSET=N345
+345,  -0.004750,  0.000000,  2.106930
+*NODE, NSET=N346
+346,  -0.004751,  0.000000,  2.106930
+*NODE, NSET=N347
+347,  -0.012371,  0.000000,  2.106930
+*NODE, NSET=N348
+348,  0.000000,  -0.004750,  2.106930
+*NODE, NSET=N349
+349,  0.000000,  -0.004751,  2.106930
+*NODE, NSET=N350
+350,  0.000000,  -0.012371,  2.106930
+*NODE, NSET=N351
+351,  0.004750,  0.000000,  2.615565
+*NODE, NSET=N352
+352,  0.004751,  0.000000,  2.615565
+*NODE, NSET=N353
+353,  0.012371,  0.000000,  2.615565
+*NODE, NSET=N354
+354,  0.004750,  0.000000,  2.634615
+*NODE, NSET=N355
+355,  0.004751,  0.000000,  2.634615
+*NODE, NSET=N356
+356,  0.012371,  0.000000,  2.634615
+*NODE, NSET=N357
+357,  0.000000,  0.004750,  2.615565
+*NODE, NSET=N358
+358,  0.000000,  0.004751,  2.615565
+*NODE, NSET=N359
+359,  0.000000,  0.012371,  2.615565
+*NODE, NSET=N360
+360,  0.000000,  0.004750,  2.634615
+*NODE, NSET=N361
+361,  0.000000,  0.004751,  2.634615
+*NODE, NSET=N362
+362,  0.000000,  0.012371,  2.634615
+*NODE, NSET=N363
+363,  -0.004750,  0.000000,  2.628900
+*NODE, NSET=N364
+364,  -0.004751,  0.000000,  2.628900
+*NODE, NSET=N365
+365,  -0.012371,  0.000000,  2.628900
+*NODE, NSET=N366
+366,  0.000000,  -0.004750,  2.628900
+*NODE, NSET=N367
+367,  0.000000,  -0.004751,  2.628900
+*NODE, NSET=N368
+368,  0.000000,  -0.012371,  2.628900
+*NODE, NSET=N369
+369,  0.004750,  0.000000,  3.137535
+*NODE, NSET=N370
+370,  0.004751,  0.000000,  3.137535
+*NODE, NSET=N371
+371,  0.012371,  0.000000,  3.137535
+*NODE, NSET=N372
+372,  0.004750,  0.000000,  3.156585
+*NODE, NSET=N373
+373,  0.004751,  0.000000,  3.156585
+*NODE, NSET=N374
+374,  0.012371,  0.000000,  3.156585
+*NODE, NSET=N375
+375,  0.000000,  0.004750,  3.137535
+*NODE, NSET=N376
+376,  0.000000,  0.004751,  3.137535
+*NODE, NSET=N377
+377,  0.000000,  0.012371,  3.137535
+*NODE, NSET=N378
+378,  0.000000,  0.004750,  3.156585
+*NODE, NSET=N379
+379,  0.000000,  0.004751,  3.156585
+*NODE, NSET=N380
+380,  0.000000,  0.012371,  3.156585
+*NODE, NSET=N381
+381,  -0.004750,  0.000000,  3.150870
+*NODE, NSET=N382
+382,  -0.004751,  0.000000,  3.150870
+*NODE, NSET=N383
+383,  -0.012371,  0.000000,  3.150870
+*NODE, NSET=N384
+384,  0.000000,  -0.004750,  3.150870
+*NODE, NSET=N385
+385,  0.000000,  -0.004751,  3.150870
+*NODE, NSET=N386
+386,  0.000000,  -0.012371,  3.150870
+*NODE, NSET=N387
+387,  0.004750,  0.000000,  3.659505
+*NODE, NSET=N388
+388,  0.004751,  0.000000,  3.659505
+*NODE, NSET=N389
+389,  0.012371,  0.000000,  3.659505
+*NODE, NSET=N390
+390,  0.004750,  0.000000,  3.678555
+*NODE, NSET=N391
+391,  0.004751,  0.000000,  3.678555
+*NODE, NSET=N392
+392,  0.012371,  0.000000,  3.678555
+*NODE, NSET=N393
+393,  0.000000,  0.004750,  3.659505
+*NODE, NSET=N394
+394,  0.000000,  0.004751,  3.659505
+*NODE, NSET=N395
+395,  0.000000,  0.012371,  3.659505
+*NODE, NSET=N396
+396,  0.000000,  0.004750,  3.678555
+*NODE, NSET=N397
+397,  0.000000,  0.004751,  3.678555
+*NODE, NSET=N398
+398,  0.000000,  0.012371,  3.678555
+*NODE, NSET=N399
+399,  -0.004750,  0.000000,  3.672840
+*NODE, NSET=N400
+400,  -0.004751,  0.000000,  3.672840
+*NODE, NSET=N401
+401,  -0.012371,  0.000000,  3.672840
+*NODE, NSET=N402
+402,  0.000000,  -0.004750,  3.672840
+*NODE, NSET=N403
+403,  0.000000,  -0.004751,  3.672840
+*ORIENTATION, NAME=GLOBAL-180, DEFINITION=COORDINATES, SYSTEM=RECTANGULAR
+-1,0,0, 0,-1,0
+*Element, type=CONN3D2, elset=Dimple_x_1_2
+260,  280,  279
+*Connector Section, elset=Dimple_x_1_2, behavior=Dimple_x_1_2
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_x_1_2
+*Connector Elasticity, nonlinear, component=1
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_x_2_2
+261,  283,  282
+*Connector Section, elset=Dimple_x_2_2, behavior=Dimple_x_2_2
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_x_2_2
+*Connector Elasticity, nonlinear, component=1
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_y_1_2
+262,  286,  285
+*Connector Section, elset=Dimple_y_1_2, behavior=Dimple_y_1_2
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_y_1_2
+*Connector Elasticity, nonlinear, component=2
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_y_2_2
+263,  289,  288
+*Connector Section, elset=Dimple_y_2_2, behavior=Dimple_y_2_2
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_y_2_2
+*Connector Elasticity, nonlinear, component=2
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Spring_x_2
+264,  292,  291
+*Connector Section, elset=Spring_x_2, behavior=Spring_x_2
+Cartesian,
+*Connector Behavior, name=Spring_x_2
+*Connector Elasticity, nonlinear, component=1
+-60000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=1847008.830303
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Spring_y_2
+265,  295,  294
+*Connector Section, elset=Spring_y_2, behavior=Spring_y_2
+Cartesian,
+*Connector Behavior, name=Spring_y_2
+*Connector Elasticity, nonlinear, component=2
+-60000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=1847008.830303
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_x_1_3
+266,  298,  297
+*Connector Section, elset=Dimple_x_1_3, behavior=Dimple_x_1_3
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_x_1_3
+*Connector Elasticity, nonlinear, component=1
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_x_2_3
+267,  301,  300
+*Connector Section, elset=Dimple_x_2_3, behavior=Dimple_x_2_3
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_x_2_3
+*Connector Elasticity, nonlinear, component=1
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_y_1_3
+268,  304,  303
+*Connector Section, elset=Dimple_y_1_3, behavior=Dimple_y_1_3
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_y_1_3
+*Connector Elasticity, nonlinear, component=2
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_y_2_3
+269,  307,  306
+*Connector Section, elset=Dimple_y_2_3, behavior=Dimple_y_2_3
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_y_2_3
+*Connector Elasticity, nonlinear, component=2
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Spring_x_3
+270,  310,  309
+*Connector Section, elset=Spring_x_3, behavior=Spring_x_3
+Cartesian,
+*Connector Behavior, name=Spring_x_3
+*Connector Elasticity, nonlinear, component=1
+-60000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=1847008.830303
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Spring_y_3
+271,  313,  312
+*Connector Section, elset=Spring_y_3, behavior=Spring_y_3
+Cartesian,
+*Connector Behavior, name=Spring_y_3
+*Connector Elasticity, nonlinear, component=2
+-60000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=1847008.830303
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_x_1_4
+272,  316,  315
+*Connector Section, elset=Dimple_x_1_4, behavior=Dimple_x_1_4
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_x_1_4
+*Connector Elasticity, nonlinear, component=1
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_x_2_4
+273,  319,  318
+*Connector Section, elset=Dimple_x_2_4, behavior=Dimple_x_2_4
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_x_2_4
+*Connector Elasticity, nonlinear, component=1
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_y_1_4
+274,  322,  321
+*Connector Section, elset=Dimple_y_1_4, behavior=Dimple_y_1_4
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_y_1_4
+*Connector Elasticity, nonlinear, component=2
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_y_2_4
+275,  325,  324
+*Connector Section, elset=Dimple_y_2_4, behavior=Dimple_y_2_4
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_y_2_4
+*Connector Elasticity, nonlinear, component=2
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Spring_x_4
+276,  328,  327
+*Connector Section, elset=Spring_x_4, behavior=Spring_x_4
+Cartesian,
+*Connector Behavior, name=Spring_x_4
+*Connector Elasticity, nonlinear, component=1
+-60000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=1847008.830303
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Spring_y_4
+277,  331,  330
+*Connector Section, elset=Spring_y_4, behavior=Spring_y_4
+Cartesian,
+*Connector Behavior, name=Spring_y_4
+*Connector Elasticity, nonlinear, component=2
+-60000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=1847008.830303
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_x_1_5
+278,  334,  333
+*Connector Section, elset=Dimple_x_1_5, behavior=Dimple_x_1_5
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_x_1_5
+*Connector Elasticity, nonlinear, component=1
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_x_2_5
+279,  337,  336
+*Connector Section, elset=Dimple_x_2_5, behavior=Dimple_x_2_5
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_x_2_5
+*Connector Elasticity, nonlinear, component=1
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_y_1_5
+280,  340,  339
+*Connector Section, elset=Dimple_y_1_5, behavior=Dimple_y_1_5
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_y_1_5
+*Connector Elasticity, nonlinear, component=2
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_y_2_5
+281,  343,  342
+*Connector Section, elset=Dimple_y_2_5, behavior=Dimple_y_2_5
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_y_2_5
+*Connector Elasticity, nonlinear, component=2
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Spring_x_5
+282,  346,  345
+*Connector Section, elset=Spring_x_5, behavior=Spring_x_5
+Cartesian,
+*Connector Behavior, name=Spring_x_5
+*Connector Elasticity, nonlinear, component=1
+-60000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=1847008.830303
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Spring_y_5
+283,  349,  348
+*Connector Section, elset=Spring_y_5, behavior=Spring_y_5
+Cartesian,
+*Connector Behavior, name=Spring_y_5
+*Connector Elasticity, nonlinear, component=2
+-60000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=1847008.830303
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_x_1_6
+284,  352,  351
+*Connector Section, elset=Dimple_x_1_6, behavior=Dimple_x_1_6
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_x_1_6
+*Connector Elasticity, nonlinear, component=1
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_x_2_6
+285,  355,  354
+*Connector Section, elset=Dimple_x_2_6, behavior=Dimple_x_2_6
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_x_2_6
+*Connector Elasticity, nonlinear, component=1
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_y_1_6
+286,  358,  357
+*Connector Section, elset=Dimple_y_1_6, behavior=Dimple_y_1_6
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_y_1_6
+*Connector Elasticity, nonlinear, component=2
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_y_2_6
+287,  361,  360
+*Connector Section, elset=Dimple_y_2_6, behavior=Dimple_y_2_6
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_y_2_6
+*Connector Elasticity, nonlinear, component=2
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Spring_x_6
+288,  364,  363
+*Connector Section, elset=Spring_x_6, behavior=Spring_x_6
+Cartesian,
+*Connector Behavior, name=Spring_x_6
+*Connector Elasticity, nonlinear, component=1
+-60000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=1847008.830303
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Spring_y_6
+289,  367,  366
+*Connector Section, elset=Spring_y_6, behavior=Spring_y_6
+Cartesian,
+*Connector Behavior, name=Spring_y_6
+*Connector Elasticity, nonlinear, component=2
+-60000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=1847008.830303
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_x_1_7
+290,  370,  369
+*Connector Section, elset=Dimple_x_1_7, behavior=Dimple_x_1_7
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_x_1_7
+*Connector Elasticity, nonlinear, component=1
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_x_2_7
+291,  373,  372
+*Connector Section, elset=Dimple_x_2_7, behavior=Dimple_x_2_7
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_x_2_7
+*Connector Elasticity, nonlinear, component=1
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_y_1_7
+292,  376,  375
+*Connector Section, elset=Dimple_y_1_7, behavior=Dimple_y_1_7
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_y_1_7
+*Connector Elasticity, nonlinear, component=2
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Dimple_y_2_7
+293,  379,  378
+*Connector Section, elset=Dimple_y_2_7, behavior=Dimple_y_2_7
+Cartesian,
+GLOBAL-180,
+*Connector Behavior, name=Dimple_y_2_7
+*Connector Elasticity, nonlinear, component=2
+-235000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=672172.994221
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Spring_x_7
+294,  382,  381
+*Connector Section, elset=Spring_x_7, behavior=Spring_x_7
+Cartesian,
+*Connector Behavior, name=Spring_x_7
+*Connector Elasticity, nonlinear, component=1
+-60000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 1, stick stiffness=1847008.830303
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+2, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*Element, type=CONN3D2, elset=Spring_y_7
+295,  385,  384
+*Connector Section, elset=Spring_y_7, behavior=Spring_y_7
+Cartesian,
+*Connector Behavior, name=Spring_y_7
+*Connector Elasticity, nonlinear, component=2
+-60000.000000, -1.000001
+      0., -0.000001
+*CONNECTOR FRICTION, CONTACT FORCE = 2, stick stiffness=1847008.830303
+*CONNECTOR POTENTIAL, EXPONENT=2., OPERATOR=SUM
+1, 1.0, 2.0
+3, 1.0, 2.0
+*friction
+0.340000, 0.0
+0.300000, 0.005
+0.300000, 1.0
+***friction,exponential decay
+**0.340000,0.300000,0.0100000
+*ElSET, ELSET=dimple_x
+dimple_x_1_2
+dimple_x_2_2
+dimple_x_1_3
+dimple_x_2_3
+dimple_x_1_4
+dimple_x_2_4
+dimple_x_1_5
+dimple_x_2_5
+dimple_x_1_6
+dimple_x_2_6
+dimple_x_1_7
+dimple_x_2_7
+*ElSET, ELSET=dimple_y
+dimple_y_1_2
+dimple_y_2_2
+dimple_y_1_3
+dimple_y_2_3
+dimple_y_1_4
+dimple_y_2_4
+dimple_y_1_5
+dimple_y_2_5
+dimple_y_1_6
+dimple_y_2_6
+dimple_y_1_7
+dimple_y_2_7
+*ElSET, ELSET=spring_x
+spring_x_2
+spring_x_3
+spring_x_4
+spring_x_5
+spring_x_6
+spring_x_7
+*ElSET, ELSET=spring_y
+spring_y_2
+spring_y_3
+spring_y_4
+spring_y_5
+spring_y_6
+spring_y_7
+*NSET, NSET=Eq_beam_dimple_l_2
+38
+*NSET, NSET=Eq_beam_dimple_u_2
+42
+*NSET, NSET=Eq_beam_spring_2
+40
+*NSET, NSET=Eq_dimple_1_l_2
+279
+*NSET, NSET=Eq_dimple_1_u_2
+282
+*NSET, NSET=Eq_dimple_2_l_2
+285
+*NSET, NSET=Eq_dimple_2_u_2
+288
+*NSET, NSET=Eq_spring_1_2
+291
+*NSET, NSET=Eq_spring_2_2
+294
+** Constraint: Constraint_x
+*Equation
+2
+Eq_beam_dimple_l_2, 1, 1.
+Eq_dimple_1_l_2, 1, -1.
+*Equation
+3
+Eq_dimple_1_l_2, 2, 1.
+Eq_beam_dimple_l_2, 2, -1.
+Eq_beam_dimple_l_2, 6, -0
+*Equation
+3
+Eq_dimple_1_l_2, 3, 1.
+Eq_beam_dimple_l_2, 3, -1.
+Eq_beam_dimple_l_2, 5, 0
+*Equation
+2
+Eq_beam_dimple_u_2, 1, 1.
+Eq_dimple_1_u_2, 1, -1.
+*Equation
+3
+Eq_dimple_1_u_2, 2, 1.
+Eq_beam_dimple_u_2, 2, -1.
+Eq_beam_dimple_u_2, 6, -0
+*Equation
+3
+Eq_dimple_1_u_2, 3, 1.
+Eq_beam_dimple_u_2, 3, -1.
+Eq_beam_dimple_u_2, 5, 0
+** Constraint: Constraint_y
+*Equation
+2
+Eq_beam_dimple_l_2, 2, 1.
+Eq_dimple_2_l_2, 2, -1.
+*Equation
+3
+Eq_dimple_2_l_2, 1, 1.
+Eq_beam_dimple_l_2, 1, -1.
+Eq_beam_dimple_l_2, 6, 0
+*Equation
+3
+Eq_dimple_2_l_2, 3, 1.
+Eq_beam_dimple_l_2, 3, -1.
+Eq_beam_dimple_l_2, 4, -0
+** Constraint: Constraint_y
+*Equation
+2
+Eq_beam_dimple_u_2, 2, 1.
+Eq_dimple_2_u_2, 2, -1.
+*Equation
+3
+Eq_dimple_2_u_2, 1, 1.
+Eq_beam_dimple_u_2, 1, -1.
+Eq_beam_dimple_u_2, 6, 0
+*Equation
+3
+Eq_dimple_2_u_2, 3, 1.
+Eq_beam_dimple_u_2, 3, -1.
+Eq_beam_dimple_u_2, 4, -0
+** Constraint: Constraint_-x
+*Equation
+2
+Eq_beam_spring_2, 1, 1.
+Eq_spring_1_2, 1, -1.
+*Equation
+3
+Eq_spring_1_2, 2, 1.
+Eq_beam_spring_2, 2, -1.
+Eq_beam_spring_2, 6, 0.004750
+*Equation
+3
+Eq_spring_1_2, 3, 1.
+Eq_beam_spring_2, 3, -1.
+Eq_beam_spring_2, 5, -0.004750
+** Constraint: Constraint_-y
+*Equation
+2
+Eq_beam_spring_2, 2, 1.
+Eq_spring_2_2, 2, -1.
+*Equation
+3
+Eq_spring_2_2, 1, 1.
+Eq_beam_spring_2, 1, -1.
+Eq_beam_spring_2, 6, -0.004750
+*Equation
+3
+Eq_spring_2_2, 3, 1.
+Eq_beam_spring_2, 3, -1.
+Eq_beam_spring_2, 4, 0.004750
+*NSET, NSET=Eq_beam_dimple_l_3
+74
+*NSET, NSET=Eq_beam_dimple_u_3
+78
+*NSET, NSET=Eq_beam_spring_3
+76
+*NSET, NSET=Eq_dimple_1_l_3
+297
+*NSET, NSET=Eq_dimple_1_u_3
+300
+*NSET, NSET=Eq_dimple_2_l_3
+303
+*NSET, NSET=Eq_dimple_2_u_3
+306
+*NSET, NSET=Eq_spring_1_3
+309
+*NSET, NSET=Eq_spring_2_3
+312
+** Constraint: Constraint_x
+*Equation
+2
+Eq_beam_dimple_l_3, 1, 1.
+Eq_dimple_1_l_3, 1, -1.
+*Equation
+3
+Eq_dimple_1_l_3, 2, 1.
+Eq_beam_dimple_l_3, 2, -1.
+Eq_beam_dimple_l_3, 6, -0
+*Equation
+3
+Eq_dimple_1_l_3, 3, 1.
+Eq_beam_dimple_l_3, 3, -1.
+Eq_beam_dimple_l_3, 5, 0
+*Equation
+2
+Eq_beam_dimple_u_3, 1, 1.
+Eq_dimple_1_u_3, 1, -1.
+*Equation
+3
+Eq_dimple_1_u_3, 2, 1.
+Eq_beam_dimple_u_3, 2, -1.
+Eq_beam_dimple_u_3, 6, -0
+*Equation
+3
+Eq_dimple_1_u_3, 3, 1.
+Eq_beam_dimple_u_3, 3, -1.
+Eq_beam_dimple_u_3, 5, 0
+** Constraint: Constraint_y
+*Equation
+2
+Eq_beam_dimple_l_3, 2, 1.
+Eq_dimple_2_l_3, 2, -1.
+*Equation
+3
+Eq_dimple_2_l_3, 1, 1.
+Eq_beam_dimple_l_3, 1, -1.
+Eq_beam_dimple_l_3, 6, 0
+*Equation
+3
+Eq_dimple_2_l_3, 3, 1.
+Eq_beam_dimple_l_3, 3, -1.
+Eq_beam_dimple_l_3, 4, -0
+** Constraint: Constraint_y
+*Equation
+2
+Eq_beam_dimple_u_3, 2, 1.
+Eq_dimple_2_u_3, 2, -1.
+*Equation
+3
+Eq_dimple_2_u_3, 1, 1.
+Eq_beam_dimple_u_3, 1, -1.
+Eq_beam_dimple_u_3, 6, 0
+*Equation
+3
+Eq_dimple_2_u_3, 3, 1.
+Eq_beam_dimple_u_3, 3, -1.
+Eq_beam_dimple_u_3, 4, -0
+** Constraint: Constraint_-x
+*Equation
+2
+Eq_beam_spring_3, 1, 1.
+Eq_spring_1_3, 1, -1.
+*Equation
+3
+Eq_spring_1_3, 2, 1.
+Eq_beam_spring_3, 2, -1.
+Eq_beam_spring_3, 6, 0.004750
+*Equation
+3
+Eq_spring_1_3, 3, 1.
+Eq_beam_spring_3, 3, -1.
+Eq_beam_spring_3, 5, -0.004750
+** Constraint: Constraint_-y
+*Equation
+2
+Eq_beam_spring_3, 2, 1.
+Eq_spring_2_3, 2, -1.
+*Equation
+3
+Eq_spring_2_3, 1, 1.
+Eq_beam_spring_3, 1, -1.
+Eq_beam_spring_3, 6, -0.004750
+*Equation
+3
+Eq_spring_2_3, 3, 1.
+Eq_beam_spring_3, 3, -1.
+Eq_beam_spring_3, 4, 0.004750
+*NSET, NSET=Eq_beam_dimple_l_4
+110
+*NSET, NSET=Eq_beam_dimple_u_4
+114
+*NSET, NSET=Eq_beam_spring_4
+112
+*NSET, NSET=Eq_dimple_1_l_4
+315
+*NSET, NSET=Eq_dimple_1_u_4
+318
+*NSET, NSET=Eq_dimple_2_l_4
+321
+*NSET, NSET=Eq_dimple_2_u_4
+324
+*NSET, NSET=Eq_spring_1_4
+327
+*NSET, NSET=Eq_spring_2_4
+330
+** Constraint: Constraint_x
+*Equation
+2
+Eq_beam_dimple_l_4, 1, 1.
+Eq_dimple_1_l_4, 1, -1.
+*Equation
+3
+Eq_dimple_1_l_4, 2, 1.
+Eq_beam_dimple_l_4, 2, -1.
+Eq_beam_dimple_l_4, 6, -0
+*Equation
+3
+Eq_dimple_1_l_4, 3, 1.
+Eq_beam_dimple_l_4, 3, -1.
+Eq_beam_dimple_l_4, 5, 0
+*Equation
+2
+Eq_beam_dimple_u_4, 1, 1.
+Eq_dimple_1_u_4, 1, -1.
+*Equation
+3
+Eq_dimple_1_u_4, 2, 1.
+Eq_beam_dimple_u_4, 2, -1.
+Eq_beam_dimple_u_4, 6, -0
+*Equation
+3
+Eq_dimple_1_u_4, 3, 1.
+Eq_beam_dimple_u_4, 3, -1.
+Eq_beam_dimple_u_4, 5, 0
+** Constraint: Constraint_y
+*Equation
+2
+Eq_beam_dimple_l_4, 2, 1.
+Eq_dimple_2_l_4, 2, -1.
+*Equation
+3
+Eq_dimple_2_l_4, 1, 1.
+Eq_beam_dimple_l_4, 1, -1.
+Eq_beam_dimple_l_4, 6, 0
+*Equation
+3
+Eq_dimple_2_l_4, 3, 1.
+Eq_beam_dimple_l_4, 3, -1.
+Eq_beam_dimple_l_4, 4, -0
+** Constraint: Constraint_y
+*Equation
+2
+Eq_beam_dimple_u_4, 2, 1.
+Eq_dimple_2_u_4, 2, -1.
+*Equation
+3
+Eq_dimple_2_u_4, 1, 1.
+Eq_beam_dimple_u_4, 1, -1.
+Eq_beam_dimple_u_4, 6, 0
+*Equation
+3
+Eq_dimple_2_u_4, 3, 1.
+Eq_beam_dimple_u_4, 3, -1.
+Eq_beam_dimple_u_4, 4, -0
+** Constraint: Constraint_-x
+*Equation
+2
+Eq_beam_spring_4, 1, 1.
+Eq_spring_1_4, 1, -1.
+*Equation
+3
+Eq_spring_1_4, 2, 1.
+Eq_beam_spring_4, 2, -1.
+Eq_beam_spring_4, 6, 0.004750
+*Equation
+3
+Eq_spring_1_4, 3, 1.
+Eq_beam_spring_4, 3, -1.
+Eq_beam_spring_4, 5, -0.004750
+** Constraint: Constraint_-y
+*Equation
+2
+Eq_beam_spring_4, 2, 1.
+Eq_spring_2_4, 2, -1.
+*Equation
+3
+Eq_spring_2_4, 1, 1.
+Eq_beam_spring_4, 1, -1.
+Eq_beam_spring_4, 6, -0.004750
+*Equation
+3
+Eq_spring_2_4, 3, 1.
+Eq_beam_spring_4, 3, -1.
+Eq_beam_spring_4, 4, 0.004750
+*NSET, NSET=Eq_beam_dimple_l_5
+146
+*NSET, NSET=Eq_beam_dimple_u_5
+150
+*NSET, NSET=Eq_beam_spring_5
+148
+*NSET, NSET=Eq_dimple_1_l_5
+333
+*NSET, NSET=Eq_dimple_1_u_5
+336
+*NSET, NSET=Eq_dimple_2_l_5
+339
+*NSET, NSET=Eq_dimple_2_u_5
+342
+*NSET, NSET=Eq_spring_1_5
+345
+*NSET, NSET=Eq_spring_2_5
+348
+** Constraint: Constraint_x
+*Equation
+2
+Eq_beam_dimple_l_5, 1, 1.
+Eq_dimple_1_l_5, 1, -1.
+*Equation
+3
+Eq_dimple_1_l_5, 2, 1.
+Eq_beam_dimple_l_5, 2, -1.
+Eq_beam_dimple_l_5, 6, -0
+*Equation
+3
+Eq_dimple_1_l_5, 3, 1.
+Eq_beam_dimple_l_5, 3, -1.
+Eq_beam_dimple_l_5, 5, 0
+*Equation
+2
+Eq_beam_dimple_u_5, 1, 1.
+Eq_dimple_1_u_5, 1, -1.
+*Equation
+3
+Eq_dimple_1_u_5, 2, 1.
+Eq_beam_dimple_u_5, 2, -1.
+Eq_beam_dimple_u_5, 6, -0
+*Equation
+3
+Eq_dimple_1_u_5, 3, 1.
+Eq_beam_dimple_u_5, 3, -1.
+Eq_beam_dimple_u_5, 5, 0
+** Constraint: Constraint_y
+*Equation
+2
+Eq_beam_dimple_l_5, 2, 1.
+Eq_dimple_2_l_5, 2, -1.
+*Equation
+3
+Eq_dimple_2_l_5, 1, 1.
+Eq_beam_dimple_l_5, 1, -1.
+Eq_beam_dimple_l_5, 6, 0
+*Equation
+3
+Eq_dimple_2_l_5, 3, 1.
+Eq_beam_dimple_l_5, 3, -1.
+Eq_beam_dimple_l_5, 4, -0
+** Constraint: Constraint_y
+*Equation
+2
+Eq_beam_dimple_u_5, 2, 1.
+Eq_dimple_2_u_5, 2, -1.
+*Equation
+3
+Eq_dimple_2_u_5, 1, 1.
+Eq_beam_dimple_u_5, 1, -1.
+Eq_beam_dimple_u_5, 6, 0
+*Equation
+3
+Eq_dimple_2_u_5, 3, 1.
+Eq_beam_dimple_u_5, 3, -1.
+Eq_beam_dimple_u_5, 4, -0
+** Constraint: Constraint_-x
+*Equation
+2
+Eq_beam_spring_5, 1, 1.
+Eq_spring_1_5, 1, -1.
+*Equation
+3
+Eq_spring_1_5, 2, 1.
+Eq_beam_spring_5, 2, -1.
+Eq_beam_spring_5, 6, 0.004750
+*Equation
+3
+Eq_spring_1_5, 3, 1.
+Eq_beam_spring_5, 3, -1.
+Eq_beam_spring_5, 5, -0.004750
+** Constraint: Constraint_-y
+*Equation
+2
+Eq_beam_spring_5, 2, 1.
+Eq_spring_2_5, 2, -1.
+*Equation
+3
+Eq_spring_2_5, 1, 1.
+Eq_beam_spring_5, 1, -1.
+Eq_beam_spring_5, 6, -0.004750
+*Equation
+3
+Eq_spring_2_5, 3, 1.
+Eq_beam_spring_5, 3, -1.
+Eq_beam_spring_5, 4, 0.004750
+*NSET, NSET=Eq_beam_dimple_l_6
+182
+*NSET, NSET=Eq_beam_dimple_u_6
+186
+*NSET, NSET=Eq_beam_spring_6
+184
+*NSET, NSET=Eq_dimple_1_l_6
+351
+*NSET, NSET=Eq_dimple_1_u_6
+354
+*NSET, NSET=Eq_dimple_2_l_6
+357
+*NSET, NSET=Eq_dimple_2_u_6
+360
+*NSET, NSET=Eq_spring_1_6
+363
+*NSET, NSET=Eq_spring_2_6
+366
+** Constraint: Constraint_x
+*Equation
+2
+Eq_beam_dimple_l_6, 1, 1.
+Eq_dimple_1_l_6, 1, -1.
+*Equation
+3
+Eq_dimple_1_l_6, 2, 1.
+Eq_beam_dimple_l_6, 2, -1.
+Eq_beam_dimple_l_6, 6, -0
+*Equation
+3
+Eq_dimple_1_l_6, 3, 1.
+Eq_beam_dimple_l_6, 3, -1.
+Eq_beam_dimple_l_6, 5, 0
+*Equation
+2
+Eq_beam_dimple_u_6, 1, 1.
+Eq_dimple_1_u_6, 1, -1.
+*Equation
+3
+Eq_dimple_1_u_6, 2, 1.
+Eq_beam_dimple_u_6, 2, -1.
+Eq_beam_dimple_u_6, 6, -0
+*Equation
+3
+Eq_dimple_1_u_6, 3, 1.
+Eq_beam_dimple_u_6, 3, -1.
+Eq_beam_dimple_u_6, 5, 0
+** Constraint: Constraint_y
+*Equation
+2
+Eq_beam_dimple_l_6, 2, 1.
+Eq_dimple_2_l_6, 2, -1.
+*Equation
+3
+Eq_dimple_2_l_6, 1, 1.
+Eq_beam_dimple_l_6, 1, -1.
+Eq_beam_dimple_l_6, 6, 0
+*Equation
+3
+Eq_dimple_2_l_6, 3, 1.
+Eq_beam_dimple_l_6, 3, -1.
+Eq_beam_dimple_l_6, 4, -0
+** Constraint: Constraint_y
+*Equation
+2
+Eq_beam_dimple_u_6, 2, 1.
+Eq_dimple_2_u_6, 2, -1.
+*Equation
+3
+Eq_dimple_2_u_6, 1, 1.
+Eq_beam_dimple_u_6, 1, -1.
+Eq_beam_dimple_u_6, 6, 0
+*Equation
+3
+Eq_dimple_2_u_6, 3, 1.
+Eq_beam_dimple_u_6, 3, -1.
+Eq_beam_dimple_u_6, 4, -0
+** Constraint: Constraint_-x
+*Equation
+2
+Eq_beam_spring_6, 1, 1.
+Eq_spring_1_6, 1, -1.
+*Equation
+3
+Eq_spring_1_6, 2, 1.
+Eq_beam_spring_6, 2, -1.
+Eq_beam_spring_6, 6, 0.004750
+*Equation
+3
+Eq_spring_1_6, 3, 1.
+Eq_beam_spring_6, 3, -1.
+Eq_beam_spring_6, 5, -0.004750
+** Constraint: Constraint_-y
+*Equation
+2
+Eq_beam_spring_6, 2, 1.
+Eq_spring_2_6, 2, -1.
+*Equation
+3
+Eq_spring_2_6, 1, 1.
+Eq_beam_spring_6, 1, -1.
+Eq_beam_spring_6, 6, -0.004750
+*Equation
+3
+Eq_spring_2_6, 3, 1.
+Eq_beam_spring_6, 3, -1.
+Eq_beam_spring_6, 4, 0.004750
+*NSET, NSET=Eq_beam_dimple_l_7
+218
+*NSET, NSET=Eq_beam_dimple_u_7
+222
+*NSET, NSET=Eq_beam_spring_7
+220
+*NSET, NSET=Eq_dimple_1_l_7
+369
+*NSET, NSET=Eq_dimple_1_u_7
+372
+*NSET, NSET=Eq_dimple_2_l_7
+375
+*NSET, NSET=Eq_dimple_2_u_7
+378
+*NSET, NSET=Eq_spring_1_7
+381
+*NSET, NSET=Eq_spring_2_7
+384
+** Constraint: Constraint_x
+*Equation
+2
+Eq_beam_dimple_l_7, 1, 1.
+Eq_dimple_1_l_7, 1, -1.
+*Equation
+3
+Eq_dimple_1_l_7, 2, 1.
+Eq_beam_dimple_l_7, 2, -1.
+Eq_beam_dimple_l_7, 6, -0
+*Equation
+3
+Eq_dimple_1_l_7, 3, 1.
+Eq_beam_dimple_l_7, 3, -1.
+Eq_beam_dimple_l_7, 5, 0
+*Equation
+2
+Eq_beam_dimple_u_7, 1, 1.
+Eq_dimple_1_u_7, 1, -1.
+*Equation
+3
+Eq_dimple_1_u_7, 2, 1.
+Eq_beam_dimple_u_7, 2, -1.
+Eq_beam_dimple_u_7, 6, -0
+*Equation
+3
+Eq_dimple_1_u_7, 3, 1.
+Eq_beam_dimple_u_7, 3, -1.
+Eq_beam_dimple_u_7, 5, 0
+** Constraint: Constraint_y
+*Equation
+2
+Eq_beam_dimple_l_7, 2, 1.
+Eq_dimple_2_l_7, 2, -1.
+*Equation
+3
+Eq_dimple_2_l_7, 1, 1.
+Eq_beam_dimple_l_7, 1, -1.
+Eq_beam_dimple_l_7, 6, 0
+*Equation
+3
+Eq_dimple_2_l_7, 3, 1.
+Eq_beam_dimple_l_7, 3, -1.
+Eq_beam_dimple_l_7, 4, -0
+** Constraint: Constraint_y
+*Equation
+2
+Eq_beam_dimple_u_7, 2, 1.
+Eq_dimple_2_u_7, 2, -1.
+*Equation
+3
+Eq_dimple_2_u_7, 1, 1.
+Eq_beam_dimple_u_7, 1, -1.
+Eq_beam_dimple_u_7, 6, 0
+*Equation
+3
+Eq_dimple_2_u_7, 3, 1.
+Eq_beam_dimple_u_7, 3, -1.
+Eq_beam_dimple_u_7, 4, -0
+** Constraint: Constraint_-x
+*Equation
+2
+Eq_beam_spring_7, 1, 1.
+Eq_spring_1_7, 1, -1.
+*Equation
+3
+Eq_spring_1_7, 2, 1.
+Eq_beam_spring_7, 2, -1.
+Eq_beam_spring_7, 6, 0.004750
+*Equation
+3
+Eq_spring_1_7, 3, 1.
+Eq_beam_spring_7, 3, -1.
+Eq_beam_spring_7, 5, -0.004750
+** Constraint: Constraint_-y
+*Equation
+2
+Eq_beam_spring_7, 2, 1.
+Eq_spring_2_7, 2, -1.
+*Equation
+3
+Eq_spring_2_7, 1, 1.
+Eq_beam_spring_7, 1, -1.
+Eq_beam_spring_7, 6, -0.004750
+*Equation
+3
+Eq_spring_2_7, 3, 1.
+Eq_beam_spring_7, 3, -1.
+Eq_beam_spring_7, 4, 0.004750
+*NSET, NSET=Check_nodes
+Eq_dimple_1_l_2
+Eq_dimple_1_u_2
+Eq_dimple_2_l_2
+Eq_dimple_2_u_2
+Eq_spring_1_2
+Eq_spring_2_2
+Eq_dimple_1_l_3
+Eq_dimple_1_u_3
+Eq_dimple_2_l_3
+Eq_dimple_2_u_3
+Eq_spring_1_3
+Eq_spring_2_3
+Eq_dimple_1_l_4
+Eq_dimple_1_u_4
+Eq_dimple_2_l_4
+Eq_dimple_2_u_4
+Eq_spring_1_4
+Eq_spring_2_4
+Eq_dimple_1_l_5
+Eq_dimple_1_u_5
+Eq_dimple_2_l_5
+Eq_dimple_2_u_5
+Eq_spring_1_5
+Eq_spring_2_5
+Eq_dimple_1_l_6
+Eq_dimple_1_u_6
+Eq_dimple_2_l_6
+Eq_dimple_2_u_6
+Eq_spring_1_6
+Eq_spring_2_6
+Eq_dimple_1_l_7
+Eq_dimple_1_u_7
+Eq_dimple_2_l_7
+Eq_dimple_2_u_7
+Eq_spring_1_7
+Eq_spring_2_7
+*NSET, NSET=load_loc
+22,24,25
+58,60,61
+94,96,97
+130,132,133
+166,168,169
+202,204,205
+238,240,241
+*********************************
+*** Material properties and BCs
+*********************************
+*Beam Section, elset=Elbody, material=Rod, poisson = 0.342000, temperature=GRADIENTS, section=PIPE
+0.004750, 0.000571
+1.,0., 0.
+** MATERIALS 
+*Material, name=Rod
+*Density
+*** kg/m3
+44099.415740,
+*Elastic
+*** Pa
+ 107987500000.000000, 0.342000
+*Amplitude, name=Amp-loc1_x_span1, definition=TABULAR
