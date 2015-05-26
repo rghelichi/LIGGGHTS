@@ -385,8 +385,8 @@ void PairGranHertzHistory::compute_force_eval(int eflag, int vflag,int addflag)
 			thickj=thickj-vol_bond_ij*radi/(12*(radj+radi)*4*PI*pow(reff,2));
 		//	if (thicki<0) std::cerr<<iii<<"   "<<thickness[iii]<<"   "<<thicki<<"   "<<vol_bond_ij*radj/(12*(radj+radi)*4*PI*pow(reff,2))<<std::endl;
 			if(to_file_flag)  	bridge_res<<iii<<","<<jjj<<","<<vol_bond_ij<<","<<thicki <<","<<thickj<<",";
-			thickness[jjj]=.00001;//thicki;
-			thickness[iii]=.00001;//thickj;
+			thickness[jjj]=1;
+			thickness[iii]=1;
 			thickeff=(thicki+thickj)/2;
 			thick_flag[iii][jjj]=0;
 			thick_flag[jjj][iii]=0;
